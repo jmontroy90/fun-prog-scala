@@ -1,5 +1,7 @@
 package com.johnmontroy.learning.funprogscala
 
+import scala.annotation.tailrec
+
 object ch3 {
 
 
@@ -49,6 +51,33 @@ object ch3 {
     case x :: Nil => Nil
     case x :: xs => x :: init(xs)
   }
+
+  /** E3.9: Compute the length of a list using foldRight. */
+  def length[A](as: List[A]): Int = as.foldRight(0)((_, acc) => acc + 1)
+
+  /** E3.10: Our implementation of foldRight is not tail-recursive and will result in a StackOverflowError for
+    * large lists (we say it’s not stack-safe). Convince yourself that this is the case, and then write another
+    * general list-recursion function, foldLeft, that is tail-recursive, using the techniques we discussed
+    * in the previous chapter. */
+  @tailrec
+  def foldLeft[A,B](as: List[A], z: B)(f: (B, A) => B): B = as match {
+    case Nil => z
+    case x :: xs => foldLeft(xs, f(z, x))(f)
+  }
+
+  /** E3.11: Write sum, product, and a function to compute the length of a list using foldLeft. */
+  def sum(as: List[Int]): Int = as.foldLeft(0)(_ + _)
+  def product(as: List[Int]): Int = as.foldLeft(0)(_ * _)
+  def length[A](as: List[A]): Int = as.foldLeft(0)((acc, _) => acc + 1)
+
+  /** E3.12: Write a function that returns the reverse of a list (given List(1,2,3) it returns List(3,2,1)).
+    * See if you can write it using a fold. */
+  def reverse[A](as: List[A]): List[A] = as.foldLeft(List(): List[A])((acc, itr) => itr :: acc)
+
+  /** E3.13: Hard: Can you write foldLeft in terms of foldRight? How about the other way around? Implementing
+    * foldRight via foldLeft is useful because it lets us implement foldRight tail-recursively, which means it
+    * works even for large lists without overflowing the stack. */
+
 
 
 
