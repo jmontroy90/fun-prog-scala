@@ -5,3 +5,5 @@ target
 *.iws
 .idea
 out
+project/target
+project/project
