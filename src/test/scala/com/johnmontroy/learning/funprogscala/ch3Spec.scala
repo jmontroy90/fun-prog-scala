@@ -1,7 +1,7 @@
 package com.johnmontroy.learning.funprogscala
 
 import org.scalatest.{FlatSpec, Matchers}
-import ch3._
+import com.johnmontroy.learning.funprogscala.probs.ch3._
 
 class ch3Spec extends FlatSpec with Matchers {
   "tail" should "return in the tail" in {

@@ -1,7 +1,7 @@
 package com.johnmontroy.learning.funprogscala
 
 import org.scalatest.{FlatSpec, Matchers}
-import ch2._
+import com.johnmontroy.learning.funprogscala.probs.ch2._
 
 class ch2Spec extends FlatSpec with Matchers {
 

@@ -1,4 +1,4 @@
-package com.johnmontroy.learning.funprogscala
+package com.johnmontroy.learning.funprogscala.probs
 
 import scala.annotation.tailrec
 
@@ -123,24 +123,16 @@ object ch3 {
   /** E3.28: Write a function map, analogous to the method of the same name on List, that modifies
     * each element in a tree with a given function. */
   /* i'm not so sure about this...this feels like you could pass in a partial function? */
-  def treeMap[A](tree: Tree[A])(fn: Tree[A] => Tree[A]): Tree[A] = tree match {
+  /* def treeMap[A](tree: Tree[A])(fn: Tree[A] => Tree[A]): Tree[A] = tree match {
     case Leaf(v) => fn(v)
     case Branch(l, r) => Branch(fn(l), fn(r))
-  }
+  }*/
 
   /** E3.29: Generalize size, maximum, depth, and map, writing a new function fold that abstracts
     * over their similarities. Reimplement them in terms of this more general function. Can you draw an
     * analogy between this fold function and the left and right folds for List? */
-  def treeFold[A, B](tree: Tree[A])(zeroFn: A => B)(reduceFn: (Tree[A], Tree[A]) => Tree[B]): B = tree match {
+  /* def treeFold[A, B](tree: Tree[A])(zeroFn: A => B)(reduceFn: (Tree[A], Tree[A]) => Tree[B]): B = tree match {
     case Leaf(v) => zeroFn(v)
     case Branch(l, r) => treeFold(reduceFn(l, r))(zeroFn)(reduceFn(_, _))
-  }
-
-
-
-
-
-
-
-
+  }*/
 }
