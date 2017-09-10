@@ -1,10 +1,10 @@
 package com.johnmontroy.learning.funprogscala
 
 import org.scalatest.{FlatSpec, Matchers}
-import ch3._
+import com.johnmontroy.learning.funprogscala.probs.ch3._
 
 class ch3Spec extends FlatSpec with Matchers {
-  /*"tail" should "return in the tail" in {
+  "tail" should "return in the tail" in {
     tail(List(1,2,3)) should be (List(2,3))
   }
 
@@ -45,6 +45,8 @@ class ch3Spec extends FlatSpec with Matchers {
   "maxTreeLength" should "get the max length of a branch" in {
     val tstTree = Branch(Branch(Branch(Leaf("a"), Leaf("b")), Leaf("c")), Branch(Leaf("d"), Leaf("e")))
     maxTreeLength(tstTree) should be (4)
-  }*/
+  }
+
+
 
 }

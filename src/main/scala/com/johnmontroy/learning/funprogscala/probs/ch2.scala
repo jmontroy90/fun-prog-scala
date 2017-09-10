@@ -1,5 +1,4 @@
-package com.johnmontroy.learning.funprogscala
-
+package com.johnmontroy.learning.funprogscala.probs
 
 object ch2 {
 
