@@ -32,6 +32,4 @@ class ch5Spec extends FlatSpec with Matchers {
     fibs().take(10).toList should be (List(0,1,1,2,3,5,8,13,21,34))
   }
 
-  ""
-
 }
