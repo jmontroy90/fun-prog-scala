@@ -60,6 +60,7 @@ object ch10 {
   def foldMap[A,B](as: List[A], m: Monoid[B])(f: A => B): B =
     as.foldLeft(m.zero)((acc, itr) => m.op(f(itr), acc))
 
-
+  /** 10.16: Product Monoid */
+  def productMonoid[A,B](A: Monoid[A], B: Monoid[B]): Monoid[(A,B)] = ???
 
 }
