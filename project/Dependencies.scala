@@ -8,4 +8,5 @@ object V {
 object Libraries {
   val junit = "junit" % "junit" % V.junit % "test"
   val scalatest = "org.scalatest" %% "scalatest" % V.scalatest % "test"
+  val cats = "org.typelevel" %% "cats-core" % "1.0.0-RC2"
 }
