@@ -29,7 +29,10 @@ object One2Ten {
 
   // silly loop exercise "insta-off-by-one" way
   def loopyPenultimate[T <: AnyVal](ts: List[T]): T = {
-    val out = for ((t, count) <- ts.zipWithIndex if count >= ts.length - 2) yield t
+    val out = for {
+      (t, count) <- ts.zipWithIndex if count >= ts.length - 2
+    } yield t
+
     out.head
   }
 
