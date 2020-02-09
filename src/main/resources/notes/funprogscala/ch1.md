@@ -1,0 +1,1 @@
+What's the point of functional programming? At the end of the day, behind all the terms and fanciness, functional programming is about expectations.
